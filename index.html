@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="style.css" rel="stylesheet">
+<title>Piskel-clone</title>
+</head>
+<body>
+    <header class="header">
+        <img id="imgHeader1" src="src/icons/Shape.png" alt="Shape.png">
+        <h1>Piskel-clone by slava-ff</h1>
+    </header>
+    <main>
+        <section id="landingPage">
+            <button id="start">Start</button>
+        </section>
+        <section id="leftSide">
+          <div class="leftBlock" id="tools">
+              <!-- <button class="btn" id="paint"><img src="src/icons/tool-paint.png" alt="tool-paint-bucket.png"></button> -->
+              <button class="btn" id="pen"><img src="src/icons/tool-pen.png" alt="tool-pen.png"></button>
+              <!-- <button class="btn" id="rectangle"><img src="src/icons/tool-rectangle.png" alt="tool-rectangle.png"></button>
+              <button class="btn" id="circle"><img src="src/icons/tool-circle.png" alt="tool-circle.png"></button> -->
+              <button class="btn" id="stroke"><img src="src/icons/tool-stroke.png" alt="tool-stroke.png"></button>
+              <button class="btn" id="eraser"><img src="src/icons/tool-eraser.png" alt="tool-eraser.png"></button>
+              <!-- <button class="btn" id="colorpicker"><img src="src/icons/tool-colorpicker.png" alt="tool-colorpicker.png"></button> -->
+          </div>
+          <div class="leftBlock" id="colors">
+            <div>
+              <input type="color" class="colorChoose" id="secondaryColor" value="#9555af">
+              <input type="color" class="colorChoose" id="primaryColor" value="#ff0000">
+              <button class="btn" id="swapColors"><img src="src/icons/swapcolors.png" alt="swapcolors.png"></button>
+            </div>
+          </div>
+        </section>
+        <section id="frames">
+            <div class="frameBox">
+                <button class="copy"><img class="copyImg" src="src/icons/frame-copy.png" alt="frame-copy.png"></button>
+                <button class="del hide"><img class="delImg" src="src/icons/frame-del.png" alt="frame-del.png"></button>
+                <div class="frameNumber"></div>
+                <canvas class="frame" width="32" height="32"></canvas>
+            </div>
+            <div id="newFrame"><button id="addFrame">Add frame</button></div>
+        </section>
+        <section id="paintArea">
+          <canvas id="canvasToPaint" width="32" height="32"></canvas>
+          <canvas id="canvasToCursor" width="32" height="32"></canvas>
+        </section>
+        <section id="animation">
+            <div class="middleBlock" id="preview">
+                <div class="cnvPrv" width="160" height="160">
+                  <canvas id="canvasPreview" width="32" height="32"></canvas>
+                </div>
+                <button id="fullscreen">Fullscreen</button>
+                <div class="range">
+                    <input type="range" id="speedRange" name="fps" min="1" max="24">
+                    <label for="fps">FPS (1-24)</label>
+                    <div id="speedRangeValue">13</div>
+                </div>
+                <!-- <button id="draw">start animation</button> -->
+                <select id="size">
+                  <option value="32">32*32</option>
+                  <option value="64">64*64</option>
+                  <option value="128">128*128</option>
+                  <option value="256">256*256</option>
+                  <option value="512">512*512</option>
+                </select>
+                <div>
+                  <div id="cursorCoords"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"></footer>
+    <script src="src/index.js"></script>
+</body>
+</html>

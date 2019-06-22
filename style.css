@@ -1,0 +1,409 @@
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,700,700i&subset=latin-ext');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    width: 1366px;
+    height: 590px;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: rgb(29, 29, 29);
+    /*background-color: rgb(145, 145, 145);*/  /*временно*/
+    /*background-color: rgb(255, 197, 197);*/  /*временно*/
+    color: white;
+    overflow-x: hidden;
+}
+
+.btn:focus,
+input:focus {
+  outline: none;
+}
+
+.header {
+    height: 5.45%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    background-color: rgb(196, 196, 196);
+}
+
+.header #imgHeader1 {
+    margin-left: 18px;
+    margin-top: -5px;
+}
+
+.header h1 {
+    margin-left: 36px;
+    margin-top: -5px;
+}
+
+main {
+    height: 100%;
+    margin: 5px 5px 0px 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+main #landingPage {
+  display: none;
+  margin: -5px -5px 0px -5px;
+  padding: 0;
+  height: 95%;
+  width: 100%;
+  position: absolute;
+  background-color: rgb(177, 177, 177);
+  z-index: 10;
+}
+
+main #landingPage #start {
+  background-color: #9555af;
+  color: white;
+  height: 40px;
+  width: 110px;
+  margin-left: 628px;
+  margin-top: 250px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: solid 1px transparent;
+}
+
+main #landingPage #start:hover,
+main #landingPage #start:focus {
+   color: #9555af;
+   border-color: currentColor;
+   background-color: white;
+}
+
+main #landingPage #start:active {
+  margin-top: 252px;
+}
+
+main #leftSide {
+    /*background-color: red;*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: rgb(92, 92, 92);
+    font-size: 12pt;
+}
+
+main #leftSide .leftBlock {
+    width: 110px;
+    border: 1px solid black;
+}
+
+main #leftSide #tools {
+  height: 466px;
+}
+
+main #leftSide #tools .btn {
+    /*height: 22.5%;
+    display: flex;
+    flex-direction: row;*/
+    background-color: rgb(58, 58, 58);
+    margin-right: -2px;
+    margin-top: 2px;
+}
+
+main #leftSide #tools .btn:hover {
+  background-color: rgb(68, 68, 68);
+}
+
+main #leftSide #tools .btn img {
+    /*margin-left: 15px;*/
+}
+
+main #leftSide #tools .btn .color {
+    margin-left: 15px;
+}
+
+main #leftSide #colors {
+    margin: 5px 0px 0px 10px;
+    height: 75px;
+    width: 75px;
+}
+
+main #leftSide #colors .colorChoose {
+  border: 4px solid rgb(68, 68, 68);
+  height: 45px;
+  width: 45px;
+}
+
+main #leftSide #colors .colorChoose {
+  opacity: 1;
+  -webkit-appearance: none;
+}
+
+main #leftSide #colors .colorChoose::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+main #leftSide #colors .colorChoose::-webkit-color-swatch {
+	border: none;
+}
+
+main #leftSide #colors .colorChoose:hover {
+  border: 4px solid rgb(136, 136, 136);
+}
+
+main #leftSide #colors #primaryColor {
+  margin: -72px 0px 0px 0px;
+  position: absolute;
+}
+
+main #leftSide #colors #secondaryColor {
+  margin: 25px 0px 0px 26px;
+}
+
+main #leftSide #colors #swapColors {
+  opacity: 0.5;
+  position: absolute;
+  margin: -23px 0px 0px 3px;
+}
+
+main #leftSide #colors #swapColors:hover {
+  opacity: 1;
+}
+
+main #leftSide #colors .color {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(92, 92, 92, 0.5);
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+main #animation {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+
+main #frames {
+    height: 95%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(104, 104, 104);
+  border-radius: 10px;
+}
+
+main #frames .frameBox {
+    width: 128px;
+    height: 128px;
+    /* width: 134px;
+    height: 134px;
+    border: 3px solid rgb(58, 58, 58);
+    border-radius: 5px; */
+    align-self: center;
+    font-size: 8pt;
+    margin: 3px 10px 3px 5px;
+    background: url("./src/icons/canvas-background-lowcontrast-dark.png");
+}
+
+main #frames .frameBox .copy, .del, .frameNumber {
+    /* background-color: rgba(100, 100, 100, 0.6); */
+    background-color: rgba(218, 112, 214, 0.4);
+    /* background-color: orchid;    */
+    border-radius: 3px;
+}
+
+main #frames .frameBox .copy {
+    position: relative;
+    bottom: -94px;
+    left: 98px;
+    z-index: 2;
+}
+
+main #frames .frameBox .del {
+    position: relative;
+    bottom: 0px;
+    left: 66px;
+    z-index: 2;
+}
+
+.hide {
+  display: none;
+}
+
+main #frames .frameBox .frameNumber {
+  background-color: rgba(218, 112, 214, 1);
+  width: 30px;
+  height: 34px;
+  position: relative;
+  bottom: 34px;
+  left: 0px;
+  text-align: center;
+  font-size: 14pt;
+  padding: 2px 0px 0px 0px;
+  z-index: 2;
+}
+
+main #frames .frameBox .frame {
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  z-index: 1;
+  position: relative;
+  bottom: 68px;
+}
+
+.current {
+  outline: 2px solid orchid !important;
+  border-radius: 5px;
+}
+
+main #frames #newFrame {
+    width: 74px;
+    height: 4px;
+    align-self: center;
+}
+
+main #frames #newFrame #addFrame {
+    width: 100%;
+    background-color: blueviolet;
+}
+
+main #animation #preview {
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+main #animation #preview .cnvPrv {
+  height: 160px;
+  width: 160px;
+  background: url("./src/icons/canvas-background-lowcontrast-dark.png");
+}
+
+main #animation #preview #canvasPreview {
+    /* background-color: white;
+    opacity: 0.5; */
+    margin-bottom: 59px;
+}
+
+main #animation #preview #canvasPreview:fullscreen {
+    background-color: white;
+}
+
+main #animation #preview .range {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 1%;
+    margin: 1%;
+}
+
+/* main #animation #preview #draw {
+    background-color: orchid;
+    padding: 1%;
+    margin: 1%;
+} */
+
+main #animation #preview #fullscreen {
+    background-color: orchid;
+    padding: 1%;
+    margin: 1%;
+}
+
+main #paintArea {
+    /* height: 100%;*/
+    width: 512px;
+    height: 512px;
+    border: 1px solid black;
+    background: url("./src/icons/canvas-background-lowcontrast-dark.png");
+}
+
+main #paintArea #canvasToPaint,
+main #paintArea #canvasToCursor {
+  position: absolute;
+  /* margin-left: 250px;
+  margin-top: 250px;
+  background-color: white;
+  opacity: 0.4;*/
+  /* width: 512px;
+  height: 512px; */
+  /*margin-left: 240px;
+  margin-top: 240px;*/
+}
+
+main #paintArea #canvasToPaint {
+  opacity: 1;
+}
+
+.penCursor {
+  cursor: url("./src/icons/cursor-pen.png") 0 7, pointer;
+}
+
+.rectangleCursor {
+  cursor: url("./src/icons/cursor-rectangle.png") 0 7, pointer;
+}
+
+.circleCursor {
+  cursor: url("./src/icons/cursor-circle.png") 0 7, pointer;
+}
+
+.eraserCursor {
+  cursor: url("./src/icons/cursor-eraser.png") 0 7, pointer;
+}
+
+.strokeCursor {
+  cursor: url("./src/icons/cursor-stroke.png") 0 7, pointer;
+}
+
+.colorpickerCursor {
+  cursor: url("./src/icons/cursor-colorpicker.png") 0 7, pointer;
+}
+
+.paintCursor {
+  cursor: url("./src/icons/cursor-paint.png") 0 7, pointer;
+}
+
+canvas {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+.highlight {
+    /* background-color: rgb(230, 230, 230); */
+    outline: 2px solid orchid !important;
+}
+
+datalist {
+    display: run-in;
+}
