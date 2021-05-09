@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/rolling-scopes-school/slava-ff-2019Q1#readme",
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
